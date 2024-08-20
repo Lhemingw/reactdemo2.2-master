@@ -13,37 +13,52 @@ function Navbar() {
     <>
     <header class="header">
     <nav className="navbar">
-        <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-            Home <i className="fa-solid fa-bars" />
-        </Link>
-        <div className="menu-icon">
-      < i className={click ? "fas fa-times " :"fas fa-bars"} />
-        </div>
-        <ul className={click ? "nav-menu active": "nav-menu"} ></ul>
-       <li className="nav-item">Home</li>
-      <Link to="/"className="nav-links" onClick={closeMobileMenu}></Link>
-
-      <ul className={click ? "nav-menu active": "nav-menu"} ></ul>
-       <li className="nav-item">Resume</li>
-      <Link to="/Resume"className="nav-links" onClick={closeMobileMenu}></Link>
-
-      <ul className={click ? "nav-menu active": "nav-menu"} ></ul>
-       <li className="nav-item">Running Website</li>
-      <Link to="/Running Website"className="nav-links" onClick={closeMobileMenu}></Link>
-
-      <ul className={click ? "nav-menu active": "nav-menu"} ></ul>
-       <li className="nav-item">Personal Story</li>
-      <Link to="/Personal Story"className="nav-links" onClick={closeMobileMenu}></Link>
-
-      <ul className={click ? "nav-menu active": "nav-menu"} ></ul>
-       <li className="nav-item">Pay</li>
-      <Link to="/Pay"className="nav-links" onClick={closeMobileMenu}></Link>
-      <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-      </div>
+    <div className="navbar-container">
+          <div className="hamburger" onClick={handleClick}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+           
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/Resume"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Resume
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/Running Website"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Running Website
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/Personal Story"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Personal Story
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/Pay" className="nav-links" onClick={closeMobileMenu}>
+                Pay
+              </Link>
+            </li>
+          </ul> 
       </div>
       </nav>
   </header>

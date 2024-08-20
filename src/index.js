@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Copyright from './components/Copyright';
+import bootstrap from 'bootstrap'
+import Navbar from './components/Navbar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Navbar />
+    <Copyright />
+    {/* //got copyright going from downloading react-bootstrap/ptting copyright */}
     <App />
   </React.StrictMode>
 );

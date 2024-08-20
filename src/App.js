@@ -1,15 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import TodoList from './TodoList'
 import { v4 as uuidv4 } from 'uuid';
-
-import Navbar from './components/Navbar.js';
+import Footer from './components/Footer'
+// import Navbar from './components/Navbar.js';
 import './App.css';
+import Copyright from './components/Copyright';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // fix this import uuidv4 from 'uuid/v4', put top import { v4 as uuidv4 } from 'uuid'; install uuidv4 in package.json
  {/* navbar */}
       <div className="App">
         <Router>
-         <Navbar />
+          <Copyright />
+          <Footer />
+         {/* <Navbar /> */}
          <Routes>
           <Route path="/"exact />
          </Routes>
